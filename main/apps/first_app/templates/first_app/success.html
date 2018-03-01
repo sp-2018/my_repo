@@ -1,0 +1,25 @@
+<html>
+
+<style>
+  h4 {color:green;}
+</style>
+<head>
+  <title>Success</title>
+</head>
+<body>
+  <meta charset+"utf-8">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet.css' %}" media="screen" title="no title"  charset="utf-8">
+  <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet_form.css' %}" media="screen" title="no title"  charset="utf-8">
+  <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet_table.css' %}" media="screen" title="no title"  charset="utf-8">
+
+    <h3>Success! Welcome, {{request.session.first_name}}!</h3>
+    <h4 color=green>Successfully {{request.session.route}}!</h4>
+    <form action='/process/logout' method='post'>
+                     {% csrf_token %}
+        </div>
+            <input class="btn btn-primary" type='submit' value='Logout'>
+        </div>
+    </form>
+</body>
+</html>

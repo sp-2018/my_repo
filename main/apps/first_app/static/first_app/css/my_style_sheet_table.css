@@ -1,0 +1,29 @@
+
+body{
+    background-color:#c2cfcf;
+    font-weight: lighter;
+}
+#container{
+    margin: 30px;
+}
+table{
+    border-spacing: 0.5rem;
+    border: 2px solid #998989;    
+    border-radius: 6px;
+}
+
+table {
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    padding: 0.5rem;
+    text-align: left;
+    border-left:2px solid #998989;
+  }
+  th{
+    background: #cccccc;
+    color:#353939;
+  }
+  tr:nth-child(odd) {background: #eee}
+  tr:nth-child(even) {background: #fff}

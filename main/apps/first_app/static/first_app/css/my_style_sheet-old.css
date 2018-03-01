@@ -1,0 +1,13 @@
+h1{
+    color:blue;
+}
+form{
+padding: 20px;
+border:2px solid blue;
+width:300px;
+display: inline-block;
+vertical-align: top;
+}
+div{
+    margin-top: 20px;
+}

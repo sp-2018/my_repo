@@ -1,0 +1,77 @@
+<html>
+    <head>
+       <title>Form</title>
+
+
+<style>
+  li {color:red;}
+</style>
+    </head>
+    <body>
+        <meta charset+"utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet.css' %}" media="screen" title="no title"  charset="utf-8">
+        <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet_form.css' %}" media="screen" title="no title"  charset="utf-8">
+        <link rel="stylesheet" href="{% static 'first_app/css/my_style_sheet_table.css' %}" media="screen" title="no title"  charset="utf-8">
+
+        <title>Login and Registration</title>
+<div class="container">
+        {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+      <div id="form1">
+
+        <h3>Register:</h3>
+        <form class="form-style" action='/process/register' method='post'>
+                 {% csrf_token %}
+            <div>
+                First Name: <input type='text' name='first_name'>
+            </div>
+            <div>
+                Last Name: <input type='text' name='last_name'>
+            </div>
+            <div>
+                Email: <input type='email' name='email'>
+            </div>
+            <div>
+                Date Hired: <input type="date" name='date'>
+            </div>
+            <div>
+                Password: <input type='password' name='password'>
+            </div>
+            <div>
+                Confirm Password: <input type='password' name='con_password'>
+            </div>
+            <div>
+                <input type='submit' value='Submit' class="btn btn-primary">
+            </div>
+        </form>
+      </div>
+
+        <div id="form2">
+
+        <h3> Login: </h3>
+        <form class="form-style" action='/process/login' method='post'>
+                         {% csrf_token %}
+            <div>
+                Email: <input type='email' name='email'>
+            </div>
+            <div>
+                Password: <input type='password' name='password'>
+            </div>
+            <div>
+                <input type='submit' value='Submit'  class="btn btn-primary">
+            </div>
+        </form>
+      </div>
+
+      </div>
+    </body>
+
+
+</html>
